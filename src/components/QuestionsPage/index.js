@@ -28,13 +28,12 @@ const QuestionsPage = () => {
     setQuestions([...tempQuestions]);
 
     setTimeout(() => {
-      setQuestionIndex(questionsIndex + 1);
-      setCorrectAnswer("0");
-      setSelectedButtonIndex(-1);
-
       if (questionsIndex === 9) {
         navigate("/score");
       }
+      setQuestionIndex(questionsIndex + 1);
+      setCorrectAnswer("0");
+      setSelectedButtonIndex(-1);
     }, [3000]);
   };
 
