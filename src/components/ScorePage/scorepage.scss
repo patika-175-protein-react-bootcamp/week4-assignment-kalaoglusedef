@@ -1,0 +1,92 @@
+.scorePageContainer {
+    font-family: "Handlee";
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+  align-items: flex-start;
+    justify-content: space-evenly;
+    background-color: #2d2d2d;
+
+    > .leftSide {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 82px;
+            position: relative;
+            color: #ff0000;
+            margin: 0;
+            margin-top: 149px;
+
+        }
+
+        p {
+            font-family: "Handlee";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 64px;
+            line-height: 85px;
+            margin: 0;
+            margin-top: 47px;
+
+            color: #ffffff;
+        }
+
+        button {
+            background-image: url(../../img/startButtonBg.svg);
+            width: 447px;
+            height: 139px;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            font-family: "Handlee";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 64px;
+            line-height: 85px;
+            margin-top: 66px;
+            cursor: pointer;
+
+            color: #ffffff;
+        }
+    }
+
+    .rightSide {
+        h1 {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 64px;
+            line-height: 109px;
+            position: relative;
+            color: #ff0000;
+            margin: 0;
+            margin-top: 149px;
+
+
+          
+        }
+          > div {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-bottom: 12px;
+                > p {
+                    text-align: center;
+                    font-family: "Handlee";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 52px;
+                    line-height: 52px;
+                    margin: 0 39px 0 0;
+
+                    color: #ffffff;
+                }
+
+               
+            }
+    }
+}

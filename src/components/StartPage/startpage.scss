@@ -1,0 +1,50 @@
+.startPageContainer {
+    font-family: "Handlee";
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2d2d2d;
+
+    > h1 {
+        margin-top: 149px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 82px;
+        line-height: 109px;
+        position: relative;
+        color: #ff0000;
+        margin-bottom: 0;
+    }
+
+    > p {
+        font-family: "Handlee";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 85px;
+        margin: 0;
+        margin-top: 47px;
+
+        color: #ffffff;
+    }
+
+    > button {
+        background-image: url(../../img/startButtonBg.svg);
+        width: 447px;
+        height: 139px;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        font-family: "Handlee";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 85px;
+        margin-top: 66px;
+        cursor: pointer;
+
+        color: #ffffff;
+    }
+}
