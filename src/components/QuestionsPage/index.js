@@ -17,24 +17,24 @@ const QuestionsPage = () => {
     const tempQuestions = [...questions];
     if (param === questions[questionsIndex].trueAnswer) {
       setCorrectAnswer("1");
-      tempQuestions[questionsIndex].isCorrect = true
+      tempQuestions[questionsIndex].isCorrect = true;
       setScore(
         score + Math.round(Math.sqrt(questions[questionsIndex].trueAnswer))
       );
-
     } else {
       tempQuestions[questionsIndex].isCorrect = false;
       setCorrectAnswer("2");
     }
-    setQuestions([...tempQuestions])
+    setQuestions([...tempQuestions]);
 
-    if (questionsIndex === 9) {
-      navigate("/score");
-    }
     setTimeout(() => {
       setQuestionIndex(questionsIndex + 1);
       setCorrectAnswer("0");
       setSelectedButtonIndex(-1);
+
+      if (questionsIndex === 9) {
+        navigate("/score");
+      }
     }, [3000]);
   };
 
