@@ -35,7 +35,7 @@ const QuestionsPage = () => {
       setQuestionIndex(questionsIndex + 1);
       setCorrectAnswer("0");
       setSelectedButtonIndex(-1);
-    }, [500]);
+    }, [3000]);
   };
 
   return (
