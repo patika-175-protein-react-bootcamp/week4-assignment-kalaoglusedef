@@ -9,6 +9,26 @@ const StartPage = (props) => {
 
   const { score, questions, setTour, tour, restartQuestions, setScore } =
     useContext(QuestionsContext);
+
+  const restart = () => {
+    const totalScore = parseInt(localStorage.getItem("totalScore"), 0) || 0;
+    const totalQuestions =
+      parseInt(localStorage.getItem("totalQuestions"), 0) || 0;
+    const correctAnswer =
+      parseInt(localStorage.getItem("correctAnswer"), 0) || 0;
+
+    localStorage.setItem("totalScore", totalScore + score);
+    localStorage.setItem("totalQuestions", totalQuestions + 10);
+    localStorage.setItem(
+      "correctAnswer",
+      correctAnswer + questions.filter((x) => x.isCorrect).length
+    );
+
+    setTour(tour + 1);
+    setScore(0);
+    restartQuestions();
+    navigate("/");
+  };
   return (
     <div className="scorePageContainer">
       <div className="leftSide">
@@ -17,30 +37,7 @@ const StartPage = (props) => {
         <p>Point Score: {score} </p>
         <p>Questions : {10} </p>
         <p>Correct Answers: {questions.filter((x) => x.isCorrect).length} </p>
-        <button
-          onClick={() => {
-            const totalScore =
-              parseInt(localStorage.getItem("totalScore"), 0) || 0;
-            const totalQuestions =
-              parseInt(localStorage.getItem("totalQuestions"), 0) || 0;
-            const correctAnswer =
-              parseInt(localStorage.getItem("correctAnswer"), 0) || 0;
-
-            localStorage.setItem("totalScore", totalScore + score);
-            localStorage.setItem("totalQuestions", totalQuestions + 10);
-            localStorage.setItem(
-              "correctAnswer",
-              correctAnswer + questions.filter((x) => x.isCorrect).length
-            );
-
-            setTour(tour + 1);
-            setScore(0);
-            restartQuestions();
-            navigate("/");
-          }}
-        >
-          Restart
-        </button>
+        <button onClick={restart}>Restart</button>
       </div>
       <div className="rightSide">
         <h1>All Questions</h1>
