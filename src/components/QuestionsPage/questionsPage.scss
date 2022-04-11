@@ -1,0 +1,120 @@
+.questionsPageContainer {
+    font-family: "Handlee";
+    width: 100%;
+    display: flex;
+    background-color: #2d2d2d;
+    min-height: 100vh;
+
+    @media only screen and (max-width: 1280px) {
+        flex-direction: column;
+    }
+
+    &.redBg {
+        background-color: #fa0000;
+    }
+
+    &.greenBg {
+        background-color: #00bf63;
+    }
+
+    > .leftSide {
+        position: relative;
+        margin-top: 98px;
+        width: 50%;
+        height: calc(100vh - 104px);
+        @media only screen and (max-width: 1280px) {
+            width: 100%;
+        }
+
+        > svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        > p {
+            font-family: "Handlee";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 128px;
+            line-height: 171px;
+            margin: 0;
+
+            color: #ffffff;
+
+            position: absolute;
+            top: 229px;
+            left: 96px;
+        }
+    }
+
+    > .rightSide {
+        margin-top: 98px;
+        position: relative;
+        width: 50%;
+
+        @media only screen and (max-width: 1280px) {
+            width: 100%;
+            margin-top: 0;
+            height: 850px;
+        }
+
+        button {
+            background-image: url(../../img/questionsBGWhite.svg);
+            width: 203px;
+            height: 178px;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            font-family: "Handlee";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 64px;
+            line-height: 85px;
+            margin-top: 66px;
+            cursor: pointer;
+            position: absolute;
+
+            color: #ffffff;
+
+            &.green {
+                background-image: url(../../img/questionsBGGreen.svg);
+            }
+
+            &.black {
+                background-image: url(../../img/questionBGBlack.svg);
+            }
+
+            &:nth-of-type(1) {
+                top: 160px;
+                left: 100px;
+            }
+
+            &:nth-of-type(2) {
+                top: 380px;
+                left: 460px;
+            }
+
+            &:nth-of-type(3) {
+                top: 550px;
+                left: 180px;
+            }
+        }
+    }
+
+    .scoreContainer {
+        position: fixed;
+        right: 50px;
+        display: flex;
+        top: 10px;
+        > span {
+            font-family: "Handlee";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 64px;
+            margin-right: 65px;
+            white-space: nowrap;
+            color: #ffffff;
+        }
+    }
+}
